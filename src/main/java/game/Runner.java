@@ -2,7 +2,10 @@ package game;
 
 public class Runner {
 	public static void main(String[] args) {
-		Player player = new Player(0, 0);
+		
+		Player player = new Player(0, 0);		
+		PointOfInterest interest = new PointOfInterest(13, 8);
+		Watch watch = new Watch(interest, player);
 		
 		String cont = "y";
 		
@@ -14,13 +17,16 @@ public class Runner {
 				"It has hands like a watch, but the hands don't seem to tell time. \r\n" + 
 				"");
 		while (cont == "y") {
-			System.out.println("Please enter north, south, east or west.");
+			System.out.println("Please enter north, south, east or west.\n");
 			String input = player.getInput();
 			
 			if (player.inputValid(input) == true) {
-				player.move(input, player.getPlayerX(), player.getPlayerY());
-				System.out.println(player.getPlayerX());
-				System.out.println(player.getPlayerY());
+				player.move(input, player.getX(), player.getY());
+				watch.showHint(watch.calcDist(
+						player.getY(),
+						player.getX(),
+						interest.getY(),
+						interest.getX()));
 			} else {
 				System.out.println("I didn't understand that.");
 				continue;

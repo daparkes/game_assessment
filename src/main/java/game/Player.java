@@ -20,14 +20,14 @@ public class Player {
 	}
 	
 	public boolean inputValid(String input) {
-		if (input == "n"
-		 || input == "north"
-		 || input == "e"
-		 || input == "east"
-		 || input == "s"
-		 || input == "south"
-		 || input == "w"
-		 || input == "west") {
+		if (input.equalsIgnoreCase("n")
+		 || input.equalsIgnoreCase("north")
+		 || input.equalsIgnoreCase("e")
+		 || input.equalsIgnoreCase("east")
+		 || input.equalsIgnoreCase("s")
+		 || input.equalsIgnoreCase("south")
+		 || input.equalsIgnoreCase("w")
+		 || input.equalsIgnoreCase("west")) {
 			return true;
 		} else {
 			return false;
@@ -63,26 +63,19 @@ public class Player {
 			moveEast(playerX);				
 		} else if (input.equalsIgnoreCase("west") || input.equalsIgnoreCase("w")) {
 			moveWest(playerX);				
-		} else {
-			System.out.println("I didn't understand that.");
-			
 		}
-	}
-		
+	}	
 	
-	
-	public int getPlayerX() {
+	public int getX() {
 		return playerX;
 	}
 	public void setPlayerX(int playerX) {
 		this.playerX = playerX;
 	}
-	public int getPlayerY() {
+	public int getY() {
 		return playerY;
 	}
 	public void setPlayerY(int playerY) {
 		this.playerY = playerY;
-	}
-	
-	
+	}	
 }

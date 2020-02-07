@@ -1,21 +1,20 @@
 package game;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class PointOfInterest {
 	
-	private HashMap<Integer, Integer> pointCoord = new HashMap<Integer, Integer>();
+	private int interestX;
+	private int interestY;
 
-	public HashMap<Integer, Integer> getPointCoord() {
-		return pointCoord;
+	public PointOfInterest(int interestX, int interestY) {
+		this.interestX = interestX;
+		this.interestY = interestY;
 	}
 
-	public void setPointCoord(HashMap<Integer, Integer> pointCoord) {
-		this.pointCoord = pointCoord;
+	public int getX() {
+		return interestX;
 	}
-	
 
-	
-	public PointOfInterest
+	public int getY() {
+		return interestY;
+	}
 }
