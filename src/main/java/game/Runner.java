@@ -4,7 +4,7 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		Player player = new Player(0, 0);		
-		PointOfInterest interest = new PointOfInterest(13, 8);
+		PointOfInterest interest = new PointOfInterest(1, 0);
 		Watch watch = new Watch(interest, player);
 		
 		String cont = "y";
@@ -26,16 +26,22 @@ public class Runner {
 						player.getY(),
 						player.getX(),
 						interest.getY(),
-						interest.getX()));
+						interest.getX()),
+						interest, player);
 			} else {
 				System.out.println("I didn't understand that.");
 				continue;
 			}
-							
+			if (player.getX() == interest.getX() && player.getY() == interest.getY()) {
+				break;
+			}
 		}
 			
 			cont = "n";
-			System.out.println("Game over.");
+			System.out.println(
+					"You see a box sitting on the plain. It’s filled with treasure!"
+					+ " You win! The end."
+					);
 		}
 		
 	}

@@ -19,11 +19,12 @@ public class Watch {
 		double xDistSqr = xDist*xDist;
 		double yDistSqr = yDist*yDist;
 		double dist = Math.sqrt(xDistSqr+yDistSqr);
-		Math.
 		return dist;
 	}
 	
-	public void showHint(double dist) {
-		System.out.println("The watch reads " + dist + "\n");
+	public void showHint(double dist, PointOfInterest interest, Player player) {
+		if (player.getX() != interest.getX() && player.getY() != interest.getY()) {
+			System.out.println("The watch reads " + dist + "\n");
+		}		
 	}
 }
