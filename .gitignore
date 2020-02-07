@@ -6,3 +6,5 @@ maven-tutorial
 *target/
 *.project/
 *bin/
+.classpath
+.project
