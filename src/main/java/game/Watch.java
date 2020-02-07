@@ -1,16 +1,8 @@
 package game;
 
 public class Watch {
-	private int playerX;
-	private int playerY;
-	private int interestY;
-	private int interestX;
-	
+
 	public Watch(PointOfInterest interest, Player player) {
-		this.interestY = interest.getY();
-		this.interestX = interest.getX();
-		this.playerX = player.getX();
-		this.playerY = player.getY();
 	}
 	
 	public double calcDist(int playerY, int playerX, int interestY, int interestX) {
@@ -23,8 +15,8 @@ public class Watch {
 	}
 	
 	public void showHint(double dist, PointOfInterest interest, Player player) {
-		if (player.getX() != interest.getX() && player.getY() != interest.getY()) {
-			System.out.println("The watch reads " + dist + "\n");
+		if (player.getX() != interest.getX() || player.getY() != interest.getY()) {
+			System.out.println("The watch reads " + dist + "m\n");
 		}		
 	}
 }

@@ -16,6 +16,7 @@ public class Runner {
 				"You notice a small watch-like device in your left hand.  \r\n" + 
 				"It has hands like a watch, but the hands don't seem to tell time. \r\n" + 
 				"");
+		
 		while (cont == "y") {
 			System.out.println("Please enter north, south, east or west.\n");
 			String input = player.getInput();
@@ -29,20 +30,18 @@ public class Runner {
 						interest.getX()),
 						interest, player);
 			} else {
-				System.out.println("I didn't understand that.");
+				System.out.println("I didn't understand that.\n");
 				continue;
 			}
+			
 			if (player.getX() == interest.getX() && player.getY() == interest.getY()) {
 				break;
 			}
-		}
-			
+		}			
 			cont = "n";
 			System.out.println(
 					"You see a box sitting on the plain. It’s filled with treasure!"
 					+ " You win! The end."
 					);
-		}
-		
+		}		
 	}
-
