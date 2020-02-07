@@ -20,6 +20,7 @@ public class Player {
 	}
 	
 	public boolean inputValid(String input) {
+		// TODO implement this functionality as a a try-catch
 		if (input.equalsIgnoreCase("n")
 		 || input.equalsIgnoreCase("north")
 		 || input.equalsIgnoreCase("e")

@@ -3,7 +3,8 @@ package game;
 public class Runner {
 	public static void main(String[] args) {
 		
-		Player player = new Player(0, 0);		
+		Player player = new Player(0, 0);
+		//TODO make the coordinates for PointOfInterest random
 		PointOfInterest interest = new PointOfInterest(12, 5);
 		Watch watch = new Watch(interest, player);
 		

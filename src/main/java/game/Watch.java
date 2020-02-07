@@ -21,7 +21,7 @@ public class Watch {
 	
 	public void showHint(double dist, PointOfInterest interest, Player player) {
 		if (player.getX() != interest.getX() || player.getY() != interest.getY()) {
-			System.out.println("The watch reads " + dist + "m\n");
+			System.out.println("\nThe watch reads " + dist + "m.\n");
 		}		
 	}
 }
