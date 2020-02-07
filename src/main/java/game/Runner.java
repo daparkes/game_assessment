@@ -4,7 +4,7 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		Player player = new Player(0, 0);		
-		PointOfInterest interest = new PointOfInterest(1, 0);
+		PointOfInterest interest = new PointOfInterest(12, 5);
 		Watch watch = new Watch(interest, player);
 		
 		String cont = "y";

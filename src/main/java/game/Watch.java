@@ -1,7 +1,10 @@
 package game;
 
-public class Watch {
+import java.util.Formatter;
 
+public class Watch {
+	Formatter formatter = new Formatter();
+	
 	public Watch(PointOfInterest interest, Player player) {
 	}
 	
@@ -11,6 +14,8 @@ public class Watch {
 		double xDistSqr = xDist*xDist;
 		double yDistSqr = yDist*yDist;
 		double dist = Math.sqrt(xDistSqr+yDistSqr);
+		// TODO
+		// round this to a reasonable number of decimal places 
 		return dist;
 	}
 	
